@@ -773,7 +773,7 @@ async function saveStockDelivery(event) {
   const data = new FormData(form);
 
   const deliveryId = String(data.get("deliveryId") || "").trim();
-  const cementId = String(data.get("cementId") || "").trim();
+  const cementId = String(form.elements.cementId.value || "").trim();
 
   const quantityText = data.get("quantity");
   const buyingPriceText = data.get("buyingPrice");
